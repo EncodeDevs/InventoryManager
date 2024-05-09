@@ -2,6 +2,7 @@
 
 Inventory::Inventory()
 {
+	this->clear();
 }
 
 Inventory::~Inventory()
@@ -89,4 +90,12 @@ vector<int> Inventory::getEmptySlots()
 int Inventory::getMaxSlots()
 {
 	return sizeof(this->items);
+}
+
+void Inventory::clear()
+{
+	for (int i = 0; i < this->getMaxSlots(); i++)
+	{
+		this->setItem(ITEM_AIR, i);
+	}
 }

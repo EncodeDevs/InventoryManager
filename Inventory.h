@@ -29,4 +29,5 @@ public:
 	bool isFull();
 	vector<int> getEmptySlots();
 	int getMaxSlots();
+	void clear();
 };
